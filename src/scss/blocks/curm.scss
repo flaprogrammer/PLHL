@@ -1,0 +1,95 @@
+﻿.curm {
+	position: relative;
+	z-index:1;
+	border-radius: 5px 5px 10px 10px;
+	margin-bottom: 0;
+}
+
+.curm__header {
+	color: #646b95;
+}
+
+
+
+.curm__title {
+
+}
+
+.curm__date {
+	float: right;
+}
+
+.curm__main {
+	background: #eeeeee;
+	padding: 30px 10px 40px;
+	color: #051e36;
+	background: url('../img/images/curm-back.jpg');
+	background-position: 50% 50%;
+	border-radius: 0 0 10px 10px;
+}
+
+.curm__commands {
+
+}
+
+.curm__com {
+	height: 140px;
+	width: 100px;
+	float: left;
+	text-align: center;
+}
+.curm__com_name {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.curm__com_img {
+	display: inline-block;
+	width: 85px;
+	height: 85px;
+	text-align: center;
+	overflow: hidden;
+	border: 3px solid #dae6ef;
+	border-radius: 10px;
+}
+
+.curm__scores_wrapper {
+	float: left;
+	width: 80px;
+	height: 90px;
+	line-height: 80px;
+}
+
+.curm__scores {
+	width: 80px;
+	line-height: 1.4em;
+	display: inline-block;
+	vertical-align: middle;
+
+	text-align: center;
+}
+
+.curm__prev_score {
+	font-size: 11px;
+	opacity: 0.7;
+	font-weight: 600;
+	margin-bottom: -5px;
+}
+
+.curm__cur_score {
+	font-size: 26px;
+	font-weight: 700;
+	margin-top: 10px;
+}
+
+.curm__left_time {
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.6em;
+}
+.curm__ice {
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.6em;
+}
+

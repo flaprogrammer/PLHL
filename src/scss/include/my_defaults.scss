@@ -1,0 +1,78 @@
+﻿// my_defaults.scss - общие стили по умолчанию, использую обычно во всех проектах
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+
+button:focus, textarea:focus, input:focus{
+	outline: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+	border: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+li {
+	list-style-type: none; /* Убираем маркеры */
+}
+ul {
+	margin-left: 0; /* Отступ слева в браузере IE и Opera */
+	padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

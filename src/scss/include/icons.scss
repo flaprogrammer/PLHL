@@ -1,0 +1,38 @@
+﻿// icons.scss - общие иконки, генерируемые через gulp.spritesmith
+
+i[class^='icon-'] {
+	display: inline-block;
+	background-image: url('../img/sprite.png');
+}
+
+
+i.icon- {
+	&header-logo {
+		@include spriteX($header-logo);
+	}
+	&footer-ins {
+		@include spriteX($footer-ins);
+	}
+	&footer-vk {
+		@include spriteX($footer-vk);
+	}
+	&footer-fb {
+		@include spriteX($footer-fb);
+	}
+	&b-arrowleft {
+		@include spriteX($b-arrowleft);
+	}
+	&b-arrowright {
+		@include spriteX($b-arrowright);
+	}
+	&gal-videoicon {
+		@include spriteX($gal-videoicon);
+	}
+}
+
+.no-touch {
+
+	i.icon- {
+
+	}
+}

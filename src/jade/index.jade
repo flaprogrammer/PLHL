@@ -1,0 +1,33 @@
+﻿doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title PLHL
+		//<meta name="viewport" content="width=device-width">
+		include ./include/favicon
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+		script(type='text/javascript', src='js/lib.js')
+		script(type='text/javascript', src='js/pre.js')
+	body
+		.superwrap
+			include ./blocks/header
+
+			.main
+				.mainwrap
+					.main__left
+						include ./blocks/curm
+						include ./blocks/nearm
+
+						include ./blocks/teams
+					.main__right
+						include ./blocks/lastnews
+						include ./blocks/results
+						include ./blocks/ttable
+						include ./blocks/gal
+
+		include ./blocks/footer
+
+
+
+		script(type='text/javascript', src='js/script.js')

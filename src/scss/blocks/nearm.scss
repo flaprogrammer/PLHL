@@ -1,0 +1,79 @@
+﻿.nearm {
+	position: relative;
+	top: -3px;
+	width: 290px;
+	margin-left: 5px;
+
+	&__left {
+		position: absolute;
+		background: #f5f7fb;
+		width: 73px;
+		float: left;
+		padding-top: 20px;
+		color: #656b95;
+		font-weight: 600;
+		text-align: center;
+		height: 100%;
+
+	}
+
+	&__day {
+		font-size: 23px;
+		position: relative;
+	}
+
+	&__day + .nearm__day:before {
+		content: '';
+		position: relative;
+		top: -5px;
+		width: 100%;
+		height: 10px;
+		background: url('../img/images/nearm-pattern.png');
+		margin-bottom: -10px;
+		z-index: 1;
+	}
+
+	&__match {
+		margin-bottom: 25px;
+	}
+
+	&__match:last-child {
+		margin-bottom: 0;
+	}
+
+	&__month {
+		font-size: 11px;
+		text-transform: uppercase;
+		color: #9aa2b2;
+
+	}
+
+	&__right {
+		background: #ffffff;
+		width: 217px;
+		float: left;
+		padding: 20px 19px;
+		margin-left: 73px;
+	}
+
+	&__time {
+		color: #656b95;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 5px;
+	}
+
+	&__teams {
+		color: #228cd7;
+		font-size: 14px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	&__ice {
+		color: #073865;
+		font-size: 11px;
+		text-transform: uppercase;
+		opacity: 0.6;
+	}
+}

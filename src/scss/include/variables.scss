@@ -1,0 +1,14 @@
+﻿//variables.scss - пара миксинов для спрайтов
+
+@mixin spriteX($sprite) {
+	@include sprite-position($sprite);
+	@include sprite-width($sprite);
+	@include sprite-height($sprite);
+}
+
+
+@mixin spriteHeaderIcon($sprite) {
+  @include sprite-position($sprite);
+}
+
+$width : 980px;

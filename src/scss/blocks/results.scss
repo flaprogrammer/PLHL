@@ -1,0 +1,103 @@
+﻿.results {
+	border-radius: 5px;
+}
+
+.results__title {
+
+}
+
+.results__main {
+	height: 117px;
+	background: #ffffff;
+	border-radius: 0 0 5px 5px;
+	overflow: hidden;
+}
+
+
+.results__nav {
+	float: right;
+	margin-left: -20px;
+	height: 33px;
+	margin-top: -10px;
+	margin-right: -10px;
+}
+
+.results__leftbut {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	height: 100%;
+	padding-top: 10px;
+	border-left: 1px solid #f0f4f9;
+	cursor: pointer;
+}
+.results__rightbut {
+	display: inline-block;
+	width: 30px;
+	height: 100%;
+	text-align: center;
+	padding-top: 10px;
+	border-left: 1px solid #f0f4f9;
+	cursor: pointer;
+}
+
+.results__list {
+	position: relative;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+
+.results__el {
+	display: inline-block;
+	width: 220px;
+	padding: 20px 25px;
+	border-right: 1px solid #ecf1f7;
+}
+
+
+.results__team {
+	display: inline-block;
+
+	&--winner {
+		font-weight: 600;
+	}
+}
+
+.results__divider {
+	display: inline-block;
+}
+.results__scores {
+
+}
+
+.results__score {
+	display: inline-block;
+	color: #051e36;
+	font-size: 11px;
+	font-weight: 600;
+	opacity: 0.7;
+	margin-right: 10px;
+	vertical-align: middle;
+
+	&--final {
+		opacity: 1;
+		font-weight: 700;
+		font-size: 15px;
+	}
+}
+
+.results__date {
+	color: #073865;
+	opacity: 0.6;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.results__teams {
+	color: #228cd7;
+	font-weight: 300;
+	font-size: 14px;
+	margin-bottom: 10px;
+}

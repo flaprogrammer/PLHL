@@ -1,0 +1,77 @@
+﻿.gal {
+	
+}
+
+.gal__main {
+	background: #ffffff;
+	padding-top: 10px;
+	border-radius: 0 0 5px 5px;
+}
+
+.gal__nav {
+	float: right;
+	margin-left: -20px;
+	height: 33px;
+	margin-top: -10px;
+	margin-right: -10px;
+}
+
+.gal__leftbut {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	height: 100%;
+	padding-top: 10px;
+	border-left: 1px solid #f0f4f9;
+	cursor: pointer;
+}
+.gal__rightbut {
+	display: inline-block;
+	width: 30px;
+	height: 100%;
+	text-align: center;
+	padding-top: 10px;
+	border-left: 1px solid #f0f4f9;
+	cursor: pointer;
+}
+
+
+.gal__el {
+	float: left;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+
+.gal__el--big {
+	height: 240px;
+	width: 300px;
+}
+
+.gal__el--small {
+	height: 115px;
+	width: 160px;
+}
+
+.gal__el--video {
+	position: relative;
+	background: #073969;
+	&:after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		top: 50%;
+		left: 50%;
+		margin-top: -25px;
+		margin-left: -25px;
+		background-image: url('../img/sprite.png');
+		@include spriteX($gal-videoicon);
+	}
+}
+
+.gal__el--video img {
+	opacity: 0.8;
+}

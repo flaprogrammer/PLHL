@@ -1,0 +1,85 @@
+﻿// elements.scss - тут немного стилей для лого, контейнера и прочее
+
+* {
+	box-sizing:border-box;
+}
+
+html {
+
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	min-width: 1000px;
+
+}
+
+.mainwrap {
+	width: $width;
+	margin: auto;
+}
+
+/* STICKY FOOTER */
+
+html, body {
+	height: 100%;
+}
+
+.superwrap {
+	min-height: 100%;
+	background: rgba(234, 240, 247, 0.95);
+}
+
+.main {
+	overflow:auto;
+	padding-bottom: 233px;
+}  /* must be same height as the footer */
+
+.footer {
+	position: relative;
+	margin-top: -233px; /* negative value of footer height */
+	height: 233px;
+	clear:both;
+}
+
+.b-header {
+	position: relative;
+	height: 33px;
+	width: 100%;
+	font-size: 12px;
+	background: #ffffff;
+	padding: 10px 15px;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+	z-index: 1;
+}
+
+.b-title {
+	font-weight: 700;
+	color: #646b95;
+	text-transform: uppercase;
+	float: left;
+}
+
+.b-main {
+	border-radius: 0 0 5px 5px;
+}
+
+.b {
+	position: relative;
+	width: 100%;
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
+
+/* STICKY FOOTER END */

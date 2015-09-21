@@ -1,0 +1,17 @@
+﻿doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title IKEA
+		//<meta name="viewport" content="width=device-width">
+		include ./include/favicon
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+	body
+		i.icon-logo
+
+		.error_page
+			.error_page__main.error_page__main--500
+				.error_page__code Ошибка 500
+				.error_page__mes Да, даже «Прогноз настроения» иногда <br>допускает ошибки…
+				.error_page__mes2 Попробуйте обновить страницу <br>или зайти на сайт позже.
+				.error_page__refresh_but Обновить

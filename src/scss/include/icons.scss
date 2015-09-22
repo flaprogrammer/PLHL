@@ -28,6 +28,15 @@ i.icon- {
 	&gal-videoicon {
 		@include spriteX($gal-videoicon);
 	}
+	&tab-active-corner {
+		@include spriteX($tab-active-corner);
+	}
+	&tab-corner {
+		@include spriteX($tab-corner);
+	}
+	&select-triangle {
+		@include spriteX($select-triangle);
+	}
 }
 
 .no-touch {

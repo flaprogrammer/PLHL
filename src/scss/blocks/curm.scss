@@ -28,12 +28,16 @@
 	border-radius: 0 0 10px 10px;
 }
 
+.curm__main--lastmatch {
+	padding: 20px 10px 10px;
+}
+
 .curm__commands {
 
 }
 
 .curm__com {
-	height: 140px;
+	height: 120px;
 	width: 100px;
 	float: left;
 	text-align: center;
@@ -86,6 +90,7 @@
 	font-size: 14px;
 	text-align: center;
 	line-height: 1.6em;
+	margin-top: 20px;
 }
 .curm__ice {
 	font-size: 14px;

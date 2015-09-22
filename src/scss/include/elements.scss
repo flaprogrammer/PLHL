@@ -35,6 +35,18 @@ html, body {
 	padding-bottom: 233px;
 }  /* must be same height as the footer */
 
+.team__left {
+	float: left;
+	width: 660px;
+	margin-right: 20px;
+}
+
+
+.team__right {
+	float: left;
+	width: 300px;
+}
+
 .footer {
 	position: relative;
 	margin-top: -233px; /* negative value of footer height */
@@ -71,6 +83,13 @@ html, body {
 	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
 	border-radius: 5px;
 	margin-bottom: 20px;
+}
+
+h2 {
+	color: #051e36;
+	font-weight: 600;
+	font-size: 30px;
+	margin-top: 0;
 }
 
 /*Opera Fix*/

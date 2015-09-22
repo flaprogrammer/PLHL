@@ -1,0 +1,193 @@
+﻿.teamplayers {
+
+}
+
+.teamplayers__main {
+	position: relative;
+	background: #ffffff;
+	padding-top: 20px;
+	z-index: 1;
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 0 5px 5px 5px;
+	overflow: hidden;
+}
+
+.teamplayers__content {
+	display: none;
+}
+
+.teamplayers__content--active {
+	display: block;
+}
+
+.teamplayers__filters {
+	margin-left: 20px;
+}
+
+.teamplayers__season_title {
+	font-size: 11px;
+	color: #073865;
+	opacity: 0.6;
+	text-transform: uppercase;
+	margin-right: 10px;
+}
+
+.teamplayers__tab {
+	position: relative;
+	display: inline-block;
+	color: #646b95;
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 15px 20px;
+	border-radius: 10px 10px 0 0;
+	background: #f5f8fb;
+	cursor: pointer;
+	margin-right: -4px;
+	z-index: 20;
+
+
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		bottom: -3px;
+		right: -9px;
+		background-image: url('../img/sprite.png');
+		@include spriteX($tab-corner);
+	}
+
+	&--active {
+		font-weight: 700;
+		background: #ffffff;
+		cursor: auto;
+		z-index: 21;
+
+		&:after {
+			background-image: url('../img/sprite.png');
+			@include spriteX($tab-active-corner);
+		}
+	}
+
+
+}
+
+.teamplayers__playerslist {
+	width: 100%;
+	background: #ffffff;
+	padding: 20px;
+}
+.teamplayers__player {
+	width: 235px;
+	height: 200px;
+	float: left;
+	text-align: center;
+	padding: 20px 0;
+	border-right: 1px solid #ebeff2;
+	border-bottom: 1px solid #ebeff2;
+}
+
+.teamplayers__player:nth-child(4n+4) {
+	border-right: none;
+}
+
+.teamplayers__player--lastrow {
+	border-bottom: none;
+}
+
+.teamplayers__player_header {
+	font-size: 10px;
+	color: #9aa2b2;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.teamplayers__player_number {
+	display: inline-block;
+	color: #656b95;
+	padding: 0 5px;
+	background: #eaf0f7;
+	border-radius: 50%;
+	margin-right: 0.5em;
+}
+
+.teamplayers__player_position {
+
+}
+.teamplayers__player_photo {
+	display: inline-block;
+	width: 110px;
+	height: 110px;
+	border: 3px solid #dae6ef;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 8px;
+}
+
+.teamplayers__player_name {
+	font-weight: 600;
+	font-size: 14px;
+	color: #051e36;
+}
+
+.teamplayers__comingsoon {
+	height: 450px;
+	font-size: 16px;
+	color: #9aa2b2;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+
+
+.customSelect {
+	/* This is the default class that is used */
+	/* Put whatever custom styles you want here */
+	position: relative;
+	z-index: -1;
+	width: 130px;
+	border-radius: 5px;
+	border: 1px solid #ececec;
+	padding: 8px;
+	color: #073865;
+	font-size: 13px;
+	box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.05);
+
+	&:after {
+		content: '';
+		position: absolute;
+		background-image: url('../img/sprite.png');
+		@include spriteX($select-triangle);
+		right: 10px;
+		top:50%;
+		margin-top: -2px;
+
+	}
+}
+
+.customSelect.customSelectHover {
+	/* Styles for when the select box is hovered */
+}
+
+.customSelect.customSelectOpen {
+	/* Styles for when the select box is open */
+	width: 130px;
+	padding: 8px;
+}
+
+.customSelect.customSelectFocus {
+	/* Styles for when the select box is in focus */
+}
+
+.customSelect.customSelectDisabledOption {
+	/* Styles for when the selected item is a disabled one */
+}
+
+.customSelect.customSelectDisabled {
+	/* Styles for when the select box itself is disabled */
+}
+
+.customSelectInner {
+	/* You can style the inner box too */
+}

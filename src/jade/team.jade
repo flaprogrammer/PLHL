@@ -1,0 +1,74 @@
+﻿doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title PLHL
+		//<meta name="viewport" content="width=device-width">
+		include ./include/favicon
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+		script(type='text/javascript', src='js/lib.js')
+		script(type='text/javascript', src='js/pre.js')
+	body
+		.superwrap
+			include ./blocks/header
+
+			.main
+				.mainwrap.clearfix
+					h2 Команда «Мимари»
+					.team__left
+						include ./blocks/teaminfo
+					.team__right
+
+						.curm.b
+							.curm__header.b-header
+								.curm__title.b-title Последний матч
+								.curm__date 12 марта
+							.curm__main.curm__main--lastmatch
+								.curm__commands.clearfix
+									.curm__com.curm__com1
+										.curm__com_img
+											img(src="img/i/curm-com1.jpg")
+										.curm__com_name Тюлячи
+									.curm__scores_wrapper
+										.curm__scores
+											.curm__prev_score 0 : 2
+											.curm__prev_score 1 : 3
+											.curm__cur_score 2 : 4
+									.curm__com.curm__com2
+										.curm__com_img
+											img(src="img/i/curm-com2.jpg")
+										.curm__com_name АБС
+
+						.nearm.nearm--single.b
+							.nearm__header.b-header
+								.nearm__title.b-title Ближайшие матчи
+							.nearm__day.clearfix
+								.nearm__left
+									.nearm__date
+										.nearm__day 23
+										.nearm__month марта
+								.nearm__right
+									.nearm__match
+										.nearm__time 20:00
+										.nearm__teams Высокая гора - Пестрецы
+										.nearm__ice Лед: Высокая гора
+							.nearm__day.clearfix
+								.nearm__left
+									.nearm__date
+										.nearm__day 2
+										.nearm__month декабря
+								.nearm__right
+									.nearm__match
+										.nearm__time 21:45
+										.nearm__teams Орион – Тюлячи
+										.nearm__ice Лед: Форвард
+				.mainwrap
+					include ./blocks/teamplayers
+
+
+		include ./blocks/footer
+
+
+
+		script(type='text/javascript', src='js/script.js')

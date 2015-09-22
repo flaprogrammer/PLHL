@@ -4,6 +4,13 @@
 	width: 290px;
 	margin-left: 5px;
 
+	&--single {
+		margin-top: 20px;
+		top: 0;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
 	&__left {
 		position: absolute;
 		background: #f5f7fb;

@@ -10,6 +10,9 @@ if $('.plyrs__el').length
 	for i in [1..lastnums]
 		$('.plyrs__el').eq(-i).addClass('plyrs__el--lastrow')
 
+if $('.bigtable__select').length
+	$('.bigtable__select').customSelect()
+
 if $('.teamplayers__season').length
 	$('.teamplayers__season').customSelect()
 

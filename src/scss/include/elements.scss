@@ -102,3 +102,61 @@ body:before {
 }
 
 /* STICKY FOOTER END */
+
+
+
+.customSelect {
+	/* This is the default class that is used */
+	/* Put whatever custom styles you want here */
+	position: relative;
+	z-index: 0;
+	width: 130px;
+	border-radius: 5px;
+	border: 1px solid #ececec;
+	padding: 8px 10px;
+	color: #073865;
+	font-size: 13px;
+	box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.05);
+	background: #ffffff;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background-image: url('../img/sprite.png');
+		@include spriteX($select-triangle);
+		right: 10px;
+		top:50%;
+		margin-top: -2px;
+
+	}
+}
+
+.hasCustomSelect {
+	position: relative;
+	z-index: 1;
+}
+
+.customSelect.customSelectHover {
+	/* Styles for when the select box is hovered */
+}
+
+.customSelect.customSelectOpen {
+	/* Styles for when the select box is open */
+	width: 130px;
+}
+
+.customSelect.customSelectFocus {
+	/* Styles for when the select box is in focus */
+}
+
+.customSelect.customSelectDisabledOption {
+	/* Styles for when the selected item is a disabled one */
+}
+
+.customSelect.customSelectDisabled {
+	/* Styles for when the select box itself is disabled */
+}
+
+.customSelectInner {
+	/* You can style the inner box too */
+}

@@ -16,6 +16,10 @@ if ($('.plyrs__el').length) {
   }
 }
 
+if ($('.bigtable__select').length) {
+  $('.bigtable__select').customSelect();
+}
+
 if ($('.teamplayers__season').length) {
   $('.teamplayers__season').customSelect();
 }

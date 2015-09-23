@@ -1,21 +1,3 @@
-var i, j, k, lastnums, len, ref, ref1;
-
-if ($('.teamplayers__player').length) {
-  len = $('.teamplayers__player').length;
-  lastnums = len % 4 || 4;
-  for (i = j = 1, ref = lastnums; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
-    $('.teamplayers__player').eq(-i).addClass('teamplayers__player--lastrow');
-  }
-}
-
-if ($('.plyrs__el').length) {
-  len = $('.plyrs__el').length;
-  lastnums = len % 2 || 2;
-  for (i = k = 1, ref1 = lastnums; 1 <= ref1 ? k <= ref1 : k >= ref1; i = 1 <= ref1 ? ++k : --k) {
-    $('.plyrs__el').eq(-i).addClass('plyrs__el--lastrow');
-  }
-}
-
 if ($('.bigtable__select').length) {
   $('.bigtable__select').customSelect();
 }
@@ -35,7 +17,7 @@ if ($('.teamplayers__tab').length) {
   });
 }
 
-var Mygallery, g1;
+var Mygallery, SimpleGallery, g1, g2;
 
 Mygallery = function(opts) {
   var copy, copy2, self;
@@ -110,6 +92,10 @@ Mygallery.prototype.showSlide = function(val) {
   });
 };
 
+SimpleGallery = function() {};
+
+SimpleGallery.prototype = new Mygallery();
+
 g1 = new Mygallery({
   selector: '.teams__images',
   slide: '.teams__img',
@@ -118,12 +104,10 @@ g1 = new Mygallery({
   width: 300
 });
 
-
-/*g2 = new Mygallery({
-	selector : '.results__list'
-	slide : '.results__el'
-	prevBut : '.results__leftbut'
-	nextBut : '.results__rightbut'
-	width: 660
-})
- */
+g2 = new SimpleGallery({
+  selector: '.results__list',
+  slide: '.results__el',
+  prevBut: '.results__leftbut',
+  nextBut: '.results__rightbut',
+  width: 660
+});

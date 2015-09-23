@@ -67,7 +67,7 @@
 	background: #ffffff;
 	padding: 45px;
 	float: left;
-	border-bottom: 1px solid #ebeff2;
+	border-top: 1px solid #ebeff2;
 }
 
 .plyrs__el:nth-child(2n+1) {
@@ -75,8 +75,8 @@
 }
 
 
-.plyrs__el--lastrow  {
-	border-bottom: none;
+.plyrs__el:nth-child(1),.plyrs__el:nth-child(2)  {
+	border-top: none;
 }
 
 .plyrs__el_left {

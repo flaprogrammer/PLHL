@@ -68,6 +68,12 @@ Mygallery.prototype.showSlide = (val) ->
 	)
 
 
+SimpleGallery = ->
+
+SimpleGallery.prototype = new Mygallery()
+
+
+
 g1 = new Mygallery({
 	selector : '.teams__images'
 	slide : '.teams__img'
@@ -76,11 +82,11 @@ g1 = new Mygallery({
 	width: 300
 })
 
-###g2 = new Mygallery({
+g2 = new SimpleGallery({
 	selector : '.results__list'
 	slide : '.results__el'
 	prevBut : '.results__leftbut'
 	nextBut : '.results__rightbut'
 	width: 660
-})###
+})
 

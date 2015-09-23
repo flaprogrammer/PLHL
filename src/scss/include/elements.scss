@@ -10,8 +10,14 @@ html {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	min-width: 1000px;
+	min-width: 1024px;
 
+}
+
+
+.mobile-body {
+	//min-width: initial;
+	min-width: 320px;
 }
 
 .mainwrap {

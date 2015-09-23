@@ -85,15 +85,18 @@
 	text-align: center;
 	padding: 20px 0;
 	border-right: 1px solid #ebeff2;
-	border-bottom: 1px solid #ebeff2;
+	border-top: 1px solid #ebeff2;
 }
 
 .teamplayers__player:nth-child(4n+4) {
 	border-right: none;
 }
 
-.teamplayers__player--lastrow {
-	border-bottom: none;
+.teamplayers__player:nth-child(1),
+.teamplayers__player:nth-child(2),
+.teamplayers__player:nth-child(3),
+.teamplayers__player:nth-child(4) {
+	border-top: none;
 }
 
 .teamplayers__player_header {

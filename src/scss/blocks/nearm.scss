@@ -11,6 +11,7 @@
 		overflow: hidden;
 	}
 
+
 	&__left {
 		position: absolute;
 		background: #f5f7fb;
@@ -57,8 +58,8 @@
 
 	&__right {
 		background: #ffffff;
-		width: 217px;
-		float: left;
+		//width: 217px;
+		//float: left;
 		padding: 20px 19px;
 		margin-left: 73px;
 	}
@@ -82,5 +83,20 @@
 		font-size: 11px;
 		text-transform: uppercase;
 		opacity: 0.6;
+	}
+}
+
+
+.nearm--mobile {
+	margin-top: 20px;
+	top: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	width: auto;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	.nearm__header {
+		margin-bottom: 10px;
 	}
 }

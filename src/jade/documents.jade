@@ -14,17 +14,23 @@ html(lang='ru')
 			include ./blocks/header
 
 			.main
-				.mainwrap
-					.main__left
-						include ./blocks/curm
-						include ./blocks/nearm
+				.mainwrap.clearfix
+					h2 Документы
+					.docs
+						.docs__el
+							.docs__title Порядок определения наказаний
+							.docs__info DOC, 9мб
+						.docs__el
+							.docs__title Регламент
+							.docs__info DOC, 9мб
+						.docs__el
+							.docs__title Заявка команды
+							.docs__info PDF, 559мб
+						.docs__el
+							.docs__title Анкета
+							.docs__info DOC, 9мб
 
-						include blocks/teams
-					.main__right
-						include ./blocks/lastnews
-						include ./blocks/results
-						include ./blocks/ttable
-						include ./blocks/gal
+
 
 		include ./blocks/footer
 

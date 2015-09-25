@@ -1,0 +1,52 @@
+﻿doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title PLHL
+		//<meta name="viewport" content="width=device-width">
+		include ./include/favicon
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+		script(type='text/javascript', src='js/lib.js')
+		//script(type='text/javascript', src='js/pre.js')
+	body
+		.superwrap
+			include ./blocks/header
+
+			.main
+				.mainwrap.clearfix
+					h2 Контакты
+					.contacts.clearfix
+						.contacts__left
+							.contacts__title Контактные данные
+							.contacts__info
+								.contacts__info_title Адрес
+								.contacts__info_text 420124, Республика Татарстан, г. Казань, ул. Меридианная, 4
+							.contacts__info.contacts__info--small
+								.contacts__info_title Телефон
+								.contacts__info_text 524-96-77
+							.contacts__info.contacts__info--small
+								.contacts__info_title Факс
+								.contacts__info_text 524-96-78
+							.contacts__info
+								.contacts__info_title Эл. почта
+								.contacts__info_text plhl-kazan@rambler.ru
+						.contacts__right
+							.contacts__title Форма обратной связи
+							form.contacts__form
+								label.contacts__label
+									.contacts__form_title Ваше имя
+									input(type="text", required="required").contacts__form_textinput
+								label.contacts__label
+									.contacts__form_title Эл. почта
+									input(type="email").contacts__form_textinput
+								label.contacts__label
+									.contacts__form_title Сообщение
+									textarea.contacts__form_textinput.contacts__form_textinput--textarea
+								input(type="submit", value="Отправить").contacts__form_submit
+
+		include ./blocks/footer
+
+
+
+		script(type='text/javascript', src='js/script.js')

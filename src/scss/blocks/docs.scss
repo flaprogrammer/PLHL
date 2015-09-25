@@ -1,0 +1,37 @@
+﻿.docs {
+	background: #ffffff;
+	width: 100%;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 0 3px 1px rgba(0,0,0,0.05);
+}
+
+.docs__el {
+	height: 90px;
+	width: 100%;
+	line-height: 90px;
+	padding: 0 40px 0 35px;
+	border-bottom: 1px solid #f3f6fa;
+}
+
+.docs__el:last-child {
+	border-bottom: none;
+}
+
+.docs__title {
+	float: left;
+	color: #228cd7;
+	font-weight: 600;
+	font-size: 15px;
+}
+.docs__info {
+	float: right;
+	font-weight: 300;
+	font-size: 11px;
+	color: #051e36;
+	word-spacing: 0.4em;
+}
+
+.docs__info--upper {
+	text-transform: uppercase;
+}

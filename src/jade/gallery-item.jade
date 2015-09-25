@@ -1,0 +1,55 @@
+﻿doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title PLHL
+		//<meta name="viewport" content="width=device-width">
+		include ./include/favicon
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+		script(type='text/javascript', src='js/lib.js')
+		//script(type='text/javascript', src='js/pre.js')
+	body
+		.superwrap
+			include ./blocks/header
+
+			.main
+				.mainwrap.clearfix
+					h2 Чемпионат Татарстана 2015
+					.gi
+						.gi__main.clearfix
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+							.gi__el
+								img(src="img/i/gallery-item1.jpg")
+						.gi__footer
+							.gi__prevbut Предыдущая страница
+							.gi__pages
+								.gi__page 1
+								.gi__page 2
+								.gi__page 3
+								.gi__page ...
+								.gi__page 10
+							.gi__nextbut Следующая страница
+
+
+
+		include ./blocks/footer
+
+
+
+		script(type='text/javascript', src='js/script.js')

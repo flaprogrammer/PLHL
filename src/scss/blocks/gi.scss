@@ -1,0 +1,72 @@
+﻿.gi {
+	width: 100%;
+	background: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 0 3px 1px rgba(0,0,0,0.05);
+	overflow: hidden;
+}
+.gi__main {
+	padding: 20px;
+}
+.gi__el {
+	width: 300px;
+	height: 240px;
+	float: left;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.gi__el:nth-child(3n) {
+	margin-right: 0;
+}
+
+.gi__footer {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background: #f5f7fb;
+}
+.gi__prevbut {
+	position: absolute;
+	left: 20px;
+	top: 0;
+	font-size: 14px;
+	font-weight: 300;
+	opacity: 0.4;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}
+.gi__pages {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+
+}
+.gi__page {
+	display: inline-block;
+	cursor: pointer;
+	opacity: 0.8;
+	&:hover {
+		opacity: 1;
+	}
+	padding: 0 5px;
+}
+
+
+.gi__nextbut {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	font-size: 14px;
+	font-weight: 300;
+	opacity: 0.4;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}

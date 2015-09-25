@@ -14,17 +14,23 @@ html(lang='ru')
 			include ./blocks/header
 
 			.main
-				.mainwrap
-					.main__left
-						include ./blocks/curm
-						include ./blocks/nearm
+				.mainwrap.clearfix
+					h2 Галерея
+					.docs
+						.docs__el
+							.docs__title Чемпионат Татарстана 2015
+							.docs__info.docs__info--upper 25 фото
+						.docs__el
+							.docs__title Игроки и тренеры
+							.docs__info.docs__info--upper 25 фото
+						.docs__el
+							.docs__title Новогодний чемпионат
+							.docs__info.docs__info--upper 400 фото
+						.docs__el
+							.docs__title Анкеты
+							.docs__info.docs__info--upper 25 фото
 
-						include blocks/teams
-					.main__right
-						include ./blocks/lastnews
-						include ./blocks/results
-						include ./blocks/ttable
-						include ./blocks/gal
+
 
 		include ./blocks/footer
 

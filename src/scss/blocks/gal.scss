@@ -6,6 +6,14 @@
 	background: #ffffff;
 	padding-top: 10px;
 	border-radius: 0 0 5px 5px;
+	overflow: hidden;
+}
+.gal__list {
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+	height: 250px;
+	font-size: 0;
 }
 
 .gal__nav {
@@ -37,7 +45,8 @@
 
 
 .gal__el {
-	float: left;
+	position: relative;
+	display: inline-block;
 	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 10px;
@@ -55,6 +64,10 @@
 	height: 115px;
 	width: 160px;
 }
+
+/*.gal__el--small:nth-child(2n+1) {
+	position: absolute;
+}*/
 
 .gal__el--video {
 	position: relative;

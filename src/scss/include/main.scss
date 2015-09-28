@@ -15,7 +15,8 @@
 	height: 300px;
 	background: url('../img/images/header-bottomback.jpg');
 	background-position: 50% -100px;
-	z-index: -1;
+	z-index: 0;
+	opacity: 0.08;
 }
 
 .main:after {
@@ -26,17 +27,24 @@
 	top: 0;
 	left: 0;
 	background: rgba(234, 240, 247, 0.9);
-	background: linear-gradient(to bottom, rgba(234, 240, 247, 0.5), rgba(234, 240, 247, 1));
-	z-index: -1;
+	background: linear-gradient(to bottom, rgba(234, 240, 247, 0), rgba(234, 240, 247, 0.7));
+	z-index: 0;
+}
+
+.main>.mainwrap>div {
+	z-index: 1;
+	position: relative;
 }
 
 .main__left {
+	position: relative;
 	width: 300px;
 	float: left;
 	margin-right: 20px;
 }
 
 .main__right {
+	position: relative;
 	width: 660px;
 	float: left;
 }

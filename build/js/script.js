@@ -190,38 +190,42 @@ g3 = new TwoGallery({
   width: 650
 });
 
-var $time, interval, m, match, match_timer, reg, renderTime, s, val;
-
-interval = function(time, callback) {
-  return setInterval(callback, time);
-};
-
-$time = $('.curm__timer_time');
-
-if ($time.length > 0) {
-  val = $time.text();
-  reg = /(\d{1,2}):(\d{1,2})/;
-  match = reg.exec(val);
-  m = parseInt(match[1]);
-  s = parseInt(match[2]);
-  match_timer = interval(1000, function() {
-    s--;
-    if (s <= 0 && m <= 0) {
-      clearInterval(match_timer);
-      renderTime(0, 0);
+(function() {
+  var $time, e, error, interval, m, match, match_timer, reg, renderTime, s, val;
+  interval = function(time, callback) {
+    return setInterval(callback, time);
+  };
+  $time = $('.curm__timer_time');
+  if ($time.length > 0) {
+    val = $time.text();
+    reg = /(\d{1,2}):(\d{1,2})/;
+    match = reg.exec(val);
+    try {
+      m = parseInt(match[1]);
+      s = parseInt(match[2]);
+    } catch (error) {
+      e = error;
+      console.log('ILLEGAL TIME');
       return;
     }
-    if (s < 0) {
-      m--;
-      s = 59;
-    }
-    return renderTime(m, s);
-  });
-}
-
-renderTime = function(m, s) {
-  if (s < 10) {
-    s = '0' + s;
+    match_timer = interval(1000, function() {
+      s--;
+      if (s <= 0 && m <= 0) {
+        clearInterval(match_timer);
+        renderTime(0, 0);
+        return;
+      }
+      if (s < 0) {
+        m--;
+        s = 59;
+      }
+      return renderTime(m, s);
+    });
   }
-  return $time.text(m + ":" + s);
-};
+  return renderTime = function(m, s) {
+    if (s < 10) {
+      s = '0' + s;
+    }
+    return $time.text(m + ":" + s);
+  };
+})();

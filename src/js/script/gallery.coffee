@@ -1,125 +1,115 @@
+class Mygallery
+	constructor : (opts) ->
+		opts = opts || {}
+		opts.selector = opts.selector || ''
+		opts.slide = opts.slide || '.img'
+		opts.prevBut = opts.prevBut || '.teams__leftbut'
+		opts.nextBut = opts.nextBut || '.teams__rightbut'
 
-Mygallery = (opts) ->
-	opts = opts || {}
-	opts.selector = opts.selector || ''
-	opts.slide = opts.slide || '.img'
-	opts.prevBut = opts.prevBut || '.teams__leftbut'
-	opts.nextBut = opts.nextBut || '.teams__rightbut'
+		@$slides = $(opts.selector)
+		opts.width = opts.width || @$slides.width()
 
-	this.$slides = $(opts.selector)
-	opts.width = opts.width || this.$slides.width()
+		@true_width = @$slides.width()
 
-	this.true_width = this.$slides.width()
+		@slide_width = 300
+		@playing = false
 
-	this.slide_width = 300
-	this.playing = false
-	self = this
+		copy = @$slides.find(opts.slide).clone()
+		copy2 = @$slides.find(opts.slide).clone()
 
+		@slide_width = opts.width
 
-	copy = this.$slides.find(opts.slide).clone()
-	copy2 = this.$slides.find(opts.slide).clone()
+		@$slides.append(copy)
+		@$slides.prepend(copy2)
 
-	this.slide_width = opts.width
-
-	this.$slides.append(copy)
-	this.$slides.prepend(copy2)
-
-	this.len = $(opts.slide).length
-	this.$slides.css('left', -this.true_width*(this.len/3)+'px')
-	this.current = this.len/3
+		@len = $(opts.slide).length
+		@$slides.css('left', -@true_width*(@len/3)+'px')
+		@current = @len/3
 
 
-	$(opts.prevBut).on('click', -> self.goToSlide('prev'))
-	$(opts.nextBut).on('click', -> self.goToSlide('next'))
-
-	return this
+		$(opts.prevBut).on('click', => @goToSlide('prev'))
+		$(opts.nextBut).on('click', => @goToSlide('next'))
 
 
-Mygallery.prototype.goToSlide = (val) ->
+	goToSlide : (val) ->
 
-	return if this.playing
-	v = -1 if val=='prev'
-	v = 1 if val=='next'
+		return if @playing
+		v = -1 if val=='prev'
+		v = 1 if val=='next'
 
-	this.current += v
-	this.current = this.len-1 if this.current<0
-	this.current = 0 if this.current>this.len-1
+		@current += v
+		@current = @len-1 if @current<0
+		@current = 0 if @current>@len-1
 
-	this.showSlide(this.current)
+		@showSlide(@current)
 
-Mygallery.prototype.checkMiddle = ->
+	checkMiddle : ->
 
-	if this.current>this.len/3*2
-		this.current-= this.len/3
-		this.$slides.css('left', -this.slide_width*(this.current)+'px')
-	else if this.current<this.len/3
-		this.current+= this.len/3
-		this.$slides.css('left', -this.slide_width*(this.current)+'px')
-
-
-Mygallery.prototype.showSlide = (val) ->
-	self = this
-	this.playing = true
-	this.$slides.velocity({
-			left: -val*self.slide_width
-		}, ->
-		self.checkMiddle()
-		self.playing = false
-	)
+		if @current>@len/3*2
+			@current-= @len/3
+			@$slides.css('left', -@slide_width*(@current)+'px')
+		else if @current<@len/3
+			@current+= @len/3
+			@$slides.css('left', -@slide_width*(@current)+'px')
 
 
-
-TwoGallery = (opts) ->
-	opts = opts || {}
-	opts.selector = opts.selector || ''
-	opts.slide = opts.slide || '.img'
-	opts.prevBut = opts.prevBut || '.teams__leftbut'
-	opts.nextBut = opts.nextBut || '.teams__rightbut'
-
-	this.$slides = $(opts.selector)
-	opts.width = opts.width || this.$slides.width()
-
-	this.true_width = this.$slides.width()
-
-	this.slide_width = 300
-	this.playing = false
-	self = this
+	showSlide : (val) ->
+		@playing = true
+		@$slides.velocity({
+				left: -val*@slide_width
+			}, =>
+			@checkMiddle()
+			@playing = false
+		)
 
 
-	this.slide_width = opts.width
+class TwoGallery
+	constructor: (opts) ->
+		opts = opts || {}
+		opts.selector = opts.selector || ''
+		opts.slide = opts.slide || '.img'
+		opts.prevBut = opts.prevBut || '.teams__leftbut'
+		opts.nextBut = opts.nextBut || '.teams__rightbut'
 
-	this.len = Math.ceil(this.true_width / this.slide_width)
-	this.$slides.css('left', 0+'px')
-	this.current = 0
+		@$slides = $(opts.selector)
+		opts.width = opts.width || this.$slides.width()
 
+		@true_width = @$slides.width()
 
-	$(opts.prevBut).on('click', -> self.goToSlide('prev'))
-	$(opts.nextBut).on('click', -> self.goToSlide('next'))
+		@slide_width = 300
+		@playing = false
 
-	return this
+		@slide_width = opts.width
 
-
-TwoGallery.prototype.goToSlide = (val) ->
-
-	return if this.playing
-	v = -1 if val=='prev'
-	v = 1 if val=='next'
-
-	this.current += v
-	this.current = this.len-1 if this.current<0
-	this.current = 0 if this.current>this.len-1
-
-	this.showSlide(this.current)
+		@len = Math.ceil(@true_width / @slide_width)
+		@$slides.css('left', 0+'px')
+		@current = 0
 
 
-TwoGallery.prototype.showSlide = (val) ->
-	self = this
-	this.playing = true
-	this.$slides.velocity({
-			left: -val*self.slide_width
-		}, 800, ->
-		self.playing = false
-	)
+		$(opts.prevBut).on('click', => @goToSlide('prev'))
+		$(opts.nextBut).on('click', => @goToSlide('next'))
+
+	goToSlide : (val) ->
+
+		return if @playing
+		v = -1 if val=='prev'
+		v = 1 if val=='next'
+
+		@current += v
+		@current = @len-1 if @current<0
+		@current = 0 if @current>@len-1
+
+		@showSlide(@current)
+
+
+	showSlide : (val) ->
+		self = this
+		@playing = true
+		@$slides.velocity({
+				left: -val*@slide_width
+			}, 800, =>
+			@playing = false
+		)
 
 
 

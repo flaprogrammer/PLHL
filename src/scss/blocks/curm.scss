@@ -32,6 +32,10 @@
 	border-radius: 0 0 10px 10px;
 }
 
+.curm__main+.curm__main {
+	margin-top: 5px;
+}
+
 .curm__main--lastmatch {
 	padding: 20px 10px 10px;
 }

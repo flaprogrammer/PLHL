@@ -206,41 +206,48 @@ g3 = new TwoGallery({
 });
 
 (function() {
-  var $time, e, error, interval, m, match, match_timer, reg, renderTime, s, val;
+  var i, interval, ref, results, timer;
   interval = function(time, callback) {
     return setInterval(callback, time);
   };
-  $time = $('.curm__timer_time');
-  if ($time.length > 0) {
-    val = $time.text();
-    reg = /(\d{1,2}):(\d{1,2})/;
-    match = reg.exec(val);
-    try {
-      m = parseInt(match[1]);
-      s = parseInt(match[2]);
-    } catch (error) {
-      e = error;
-      console.log('ILLEGAL TIME');
-      return;
-    }
-    match_timer = interval(1000, function() {
-      s--;
-      if (s <= 0 && m <= 0) {
-        clearInterval(match_timer);
-        renderTime(0, 0);
-        return;
+  results = [];
+  for (timer = i = 0, ref = $('.curm__timer_time').length; 0 <= ref ? i < ref : i > ref; timer = 0 <= ref ? ++i : --i) {
+    results.push((function(timer) {
+      var $time, e, error, m, match, match_timer, reg, renderTime, s, val;
+      $time = $('.curm__timer_time').eq(timer);
+      if ($time.length > 0) {
+        val = $time.text();
+        reg = /(\d{1,2}):(\d{1,2})/;
+        match = reg.exec(val);
+        try {
+          m = parseInt(match[1]);
+          s = parseInt(match[2]);
+        } catch (error) {
+          e = error;
+          console.log('ILLEGAL TIME');
+          return;
+        }
+        match_timer = interval(1000, function() {
+          s--;
+          if (s <= 0 && m <= 0) {
+            clearInterval(match_timer);
+            renderTime(0, 0);
+            return;
+          }
+          if (s < 0) {
+            m--;
+            s = 59;
+          }
+          return renderTime(m, s);
+        });
       }
-      if (s < 0) {
-        m--;
-        s = 59;
-      }
-      return renderTime(m, s);
-    });
+      return renderTime = function(m, s) {
+        if (s < 10) {
+          s = '0' + s;
+        }
+        return $time.text(m + ":" + s);
+      };
+    })(timer));
   }
-  return renderTime = function(m, s) {
-    if (s < 10) {
-      s = '0' + s;
-    }
-    return $time.text(m + ":" + s);
-  };
+  return results;
 })();
